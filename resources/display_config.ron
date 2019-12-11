@@ -1,0 +1,5 @@
+(
+  title: "Peace",
+  dimensions: Some((500, 500)),
+  decorations: false,
+)
