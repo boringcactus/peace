@@ -13,10 +13,7 @@ os:
   - windows
 before_install:
   - if [ $TRAVIS_OS_NAME = linux ]; then sudo apt-get update && sudo apt-get install -y gcc pkg-config openssl libasound2-dev cmake build-essential python3 libfreetype6-dev libexpat1-dev libxcb-composite0-dev libssl-dev libx11-dev; fi
-  - rustup component add clippy
 script:
-  - cargo test
-  - cargo clippy
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then cargo build --release --features metal; else cargo build --release --features vulkan; fi
 deploy:
   skip_cleanup: true
