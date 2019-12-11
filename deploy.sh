@@ -14,7 +14,7 @@ if [[ "$TRAVIS_OS_NAME" == "windows" ]]; then
 else
   SUFFIX=
 fi
-cp target/release/dynamaze$SUFFIX dist/
+cp target/release/peace$SUFFIX dist/
 if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then
   BUTLER_DIST=darwin
 else
